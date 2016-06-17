@@ -701,6 +701,16 @@ h6, .h6 {
 	display: none;
 }
 
+.navbar-default .navbar-nav>.active>a {
+	color: #cd5d5c;
+	background-color: #ffffff;
+}
+	
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+	color: #cd5d5c;
+	background-color: #ffffff;
+}
+
 /*
  * RWD CSS
  */
