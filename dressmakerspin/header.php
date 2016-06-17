@@ -27,5 +27,3 @@
        <?php wp_nav_menu( array('menu' => 'Main', 'menu_class' => 'nav navbar-nav navbar-right', 'depth'=> 3, 'container'=> false, 'walker'=> new Bootstrap_Walker_Nav_Menu)); ?>
       </div><!-- /.navbar-collapse -->
     </nav>
-
-    <div id="main-container" class="container">
