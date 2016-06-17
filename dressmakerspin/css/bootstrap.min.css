@@ -830,6 +830,10 @@ h6, .h6 {
 		margin-bottom: 60px;
 	}
 	
+	.mobile-nav {
+		margin-top: 0px;
+	}
+	
 }
 
 @media (max-width: 992px) {
