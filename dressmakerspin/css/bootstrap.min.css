@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Merriweather:400,700&subset=latin-ext);
+
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -174,8 +176,6 @@ h6, .h6 {
 /*
  * Custom CSS
  */
-
-@import url(https://fonts.googleapis.com/css?family=Merriweather:400,700&subset=latin-ext);
 
 body {
 	font-family: 'Open Sans', sans-serif;

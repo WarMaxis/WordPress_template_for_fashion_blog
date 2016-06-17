@@ -14,8 +14,11 @@
 			<?php wp_nav_menu( array('menu' => 'Main', 'depth'=> 3, 'container'=> false, 'walker'=> new Bootstrap_Walker_Nav_Menu)); ?>
 		</nav>
 
-		</div>
-	</footer>
+	</div>
+</footer>
+
+<!-- Font Awesome -->
+<script src="https://use.fontawesome.com/8487f6a2c2.js"></script>
 
 </body>
 </html>
