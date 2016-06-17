@@ -769,6 +769,10 @@ h6, .h6 {
 		margin-right: 0px;
 	}
 	
+	.navbar-default .navbar-nav li:last-child {
+		margin-right: 0px;
+	}
+	
 	#bs-example-navbar-collapse-1 {
 		border-bottom-width: 1px;
 		border-bottom-style: solid;
