@@ -26,7 +26,7 @@
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse">
-			<?php wp_nav_menu( array('menu' => 'Main', 'menu_class' => 'nav navbar-nav navbar-right', 'depth'=> 3, 'container'=> false, 'walker'=> new Bootstrap_Walker_Nav_Menu)); ?>
+			<?php wp_nav_menu( array('menu' => 'Main', 'menu_class' => 'nav navbar-nav', 'depth'=> 3, 'container'=> false, 'walker'=> new Bootstrap_Walker_Nav_Menu)); ?>
 			<ul class="nav navbar-nav mobile-nav">
 				<li class="mobile-social-icons"><a href="https://www.facebook.com/"><span class="fa fa-facebook"></span></a></li>
 				<li class="mobile-social-icons"><a href="https://twitter.com/"><span class="fa fa-twitter"></span></a></li>
