@@ -25,7 +25,7 @@
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse">
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<?php wp_nav_menu( array('menu' => 'Main', 'menu_class' => 'nav navbar-nav', 'depth'=> 3, 'container'=> false, 'walker'=> new Bootstrap_Walker_Nav_Menu)); ?>
 			<ul class="nav navbar-nav mobile-nav">
 				<li class="mobile-social-icons"><a href="https://www.facebook.com/"><span class="fa fa-facebook"></span></a></li>
