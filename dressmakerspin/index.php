@@ -57,11 +57,15 @@
 		   		<?php while(have_posts()) : the_post(); ?>
 				
 				<article class="blog-post" id="post-<?php the_ID(); ?>">
-					<!-- <p class="blog-post-meta"><a href="trends.html">Trendy</a><time>2 / 05</time></p> -->
-					<!-- <a href="post.html"> -->
+					
+					<p class="blog-post-meta"><?php foreach((get_the_category()) as $category) { $category->cat_name . ' '; } ?><a href="<?php echo get_category_link(get_cat_id($category->cat_name)); ?>"><?php echo $category->cat_name ?></a><time><?php the_time('d/m'); ?></time></p>
+					
+					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 						<?php the_title('<h2 class="blog-post-title">','</h2>'); ?>
-					<!-- </a> -->
+					</a>
+					
 					<p><?php the_content(); ?></p>
+					
 				</article>	<!-- /.blog-post -->
 				
 				<?php
@@ -101,21 +105,6 @@
 				</div>
 
 				<?php endif; ?>
-
-				<blockquote class="blockquote-featured">
-					<div class="reference-container">
-						<p class="reference-blockquote">POLECAM</p>
-						<div class="reference-border"></div>
-					</div>
-					<div class="blockquote-container">
-						<p class="blockquote-paragraph">“Daj mi właściwe słowo i odpowiedni akcent, a poruszę świat.”</p>
-						<p class="blockquote-link">
-							<strong>
-								<a href="http://www.complex.com/" target="_blank">www.complex.com</a>
-							</strong>
-						</p>
-					</div>
-				</blockquote>
 
 			</section>	<!-- /.blog-main -->
 
