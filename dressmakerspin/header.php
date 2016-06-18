@@ -41,10 +41,7 @@
 	<ul class="category-list">
 
 		<!-- Lista kategorii -->
-		<li><a href="shopping.html">shopping</a></li>
-		<li><a href="mohito.html">mohito</a></li>
-		<li><a href="trends.html">trendy</a></li>
-		<li><a href="conflicts.html">konflikty sąsiedzkie</a></li>
+		<?php wp_list_categories( array( 'hide_empty' => 0, 'title_li' => '' )); ?>
 
 	</ul>
 
