@@ -628,7 +628,7 @@ h6, .h6 {
 	outline-color: #ffffff;
 }
 
-.active-link a {
+.current-cat a {
 	color: #cd5d5c !important;
 }
 
