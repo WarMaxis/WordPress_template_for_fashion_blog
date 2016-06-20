@@ -1,5 +1,19 @@
 <?php
 
+// !!! Tutaj podajemy swoje linki do portali społecznościowych oraz lokalizacji zdjęcia profilowego, po edycji należy zapisać plik !!!
+$facebook_link = 'https://www.facebook.com/'; // Facebook
+$twitter_link = 'https://twitter.com/'; // Twitter
+$instagram_link = 'https://www.instagram.com/'; // Instagram
+$author_photo_link = 'http://michaldevelopwp.azurewebsites.net/wp-content/uploads/2016/06/autorka-profilowe.png'; // Zdjęcie profilowe autorki
+// !!! Więcej już nic nie edytujemy :-) !!!
+
+
+
+
+define('FACEBOOK_LINK', $facebook_link);
+define('TWITTER_LINK', $twitter_link);
+define('INSTAGRAM_LINK', $instagram_link);
+define('AUTHOR_PHOTO_LINK', $author_photo_link);
 
 //Add thumbnail, automatic feed links and title tag support
 add_theme_support( 'post-thumbnails' );

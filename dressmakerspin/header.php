@@ -28,9 +28,9 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<?php wp_nav_menu( array('menu' => 'Main', 'menu_class' => 'nav navbar-nav', 'depth'=> 3, 'container'=> false, 'walker'=> new Bootstrap_Walker_Nav_Menu)); ?>
 			<ul class="nav navbar-nav mobile-nav">
-				<li class="mobile-social-icons"><a href="https://www.facebook.com/"><span class="fa fa-facebook"></span></a></li>
-				<li class="mobile-social-icons"><a href="https://twitter.com/"><span class="fa fa-twitter"></span></a></li>
-				<li class="mobile-social-icons"><a href="https://www.instagram.com/"><span class="fa fa-instagram"></span></a></li>
+				<li class="mobile-social-icons"><a href="<?php echo FACEBOOK_LINK; ?>"><span class="fa fa-facebook"></span></a></li>
+				<li class="mobile-social-icons"><a href="<?php echo TWITTER_LINK; ?>"><span class="fa fa-twitter"></span></a></li>
+				<li class="mobile-social-icons"><a href="<?php echo INSTAGRAM_LINK; ?>"><span class="fa fa-instagram"></span></a></li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
 
@@ -48,9 +48,9 @@
 	<!-- Ikonki social media -->
 	<div class="social-icons">
 
-		<a href="https://www.facebook.com/"><span class="fa fa-facebook"></span></a>
-		<a href="https://twitter.com/"><span class="fa fa-twitter"></span></a>
-		<a href="https://www.instagram.com/"><span class="fa fa-instagram"></span></a>
+		<a href="<?php echo FACEBOOK_LINK; ?>"><span class="fa fa-facebook"></span></a>
+		<a href="<?php echo TWITTER_LINK; ?>"><span class="fa fa-twitter"></span></a>
+		<a href="<?php echo INSTAGRAM_LINK; ?>"><span class="fa fa-instagram"></span></a>
 
 	</div>
 

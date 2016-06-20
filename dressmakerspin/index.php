@@ -117,16 +117,16 @@
 				<div class="sidebar-module sidebar-module-inset">
 
 					<!-- Zdjęcie profilowe -->
-					<img class="profile-photo" src="http://michaldevelopwp.azurewebsites.net/wp-content/uploads/2016/06/autorka-profilowe.png" alt="autorka-profilowe" width="100">
+					<img class="profile-photo" src="<?php echo AUTHOR_PHOTO_LINK; ?>" alt="autorka-profilowe" width="100">
 
 					<!-- Opis autorki -->
 					<p class="profile-description"><strong>Cześć, tu Aga!</strong><br>Prowadzę tego bloga i tego, i czytajcie a sie dowiecie. Same fajne rzeczy, bez ściemniania.</p>
 
 					<!-- Ikonki social media -->
 					<section class="social-icons sidebar">
-						<a href="https://www.facebook.com/"><span class="fa fa-facebook"></span></a>
-						<a href="https://twitter.com/"><span class="fa fa-twitter"></span></a>
-						<a href="https://www.instagram.com/"><span class="fa fa-instagram"></span></a>
+						<a href="<?php echo FACEBOOK_LINK; ?>"><span class="fa fa-facebook"></span></a>
+						<a href="<?php echo TWITTER_LINK; ?>"><span class="fa fa-twitter"></span></a>
+						<a href="<?php echo INSTAGRAM_LINK; ?>"><span class="fa fa-instagram"></span></a>
 					</section>
 
 				</div>
