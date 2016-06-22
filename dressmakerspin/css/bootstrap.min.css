@@ -874,3 +874,15 @@ h6, .h6 {
 	}
 	
 }
+
+@media (max-width: 640px) {
+	
+	.footer-credits img {
+		width: 80%;
+	}
+	
+	.navbar-brand img {
+		width: 100%;
+	}
+	
+}
