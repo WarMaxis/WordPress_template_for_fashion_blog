@@ -410,6 +410,7 @@ function bootstrap_theme_enqueue_scripts() {
 add_action( 'wp_enqueue_scripts', 'bootstrap_theme_enqueue_scripts', 1 );
 
 
+
 add_filter( 'wp_title', 'wpdocs_hack_wp_title_for_home' );
  
 /**
@@ -425,5 +426,15 @@ function wpdocs_hack_wp_title_for_home( $title )
   }
   return $title;
 }
+
+
+
+// Decrease excerpt length
+function my_excerpt_length($length) {
+	return 35; // Or whatever you want the length to be.
+}
+add_filter('excerpt_length', 'my_excerpt_length');
+
+
 
 ?>

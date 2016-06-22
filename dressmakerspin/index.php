@@ -64,7 +64,7 @@
 						<?php the_title('<h2 class="blog-post-title">','</h2>'); ?>
 					</a>
 					
-					<p><?php the_content(); ?></p>
+					<p><?php the_excerpt();?></p>
 					
 				</article>	<!-- /.blog-post -->
 				
