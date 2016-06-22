@@ -20,5 +20,9 @@
 <!-- Font Awesome -->
 <script src="https://use.fontawesome.com/8487f6a2c2.js"></script>
 
+<!-- Disqus -->
+<script id="dsq-count-scr" src="//michadevelopwpsite.disqus.com/count.js" async></script>
+
+
 </body>
 </html>

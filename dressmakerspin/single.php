@@ -37,18 +37,54 @@
 				</article>	<!-- /.blog-post -->
 				
 		   		<?php endwhile; ?>
-				
-				<?php else : ?>
-
-				<article class="subpages-article">
-
-					<h1 class="subpages-title">Brak wpisów w tej kategorii.</h1>
-
-					<p class="profile-description subpage"><strong>W tej chwili nie ma w tej kategorii żadnych wpisów.</strong><br>Jeśli chcesz możesz wejść na moją stronę główną <a href="http://michaldevelopwp.azurewebsites.net">klikając tutaj</a> :-)</p>
-
-				</article>
-
 				<?php endif; ?>
+
+				<div class="reference-container">
+					<p class="reference-blockquote">CZYTAJ RÓWNIEŻ</p>
+					<div class="reference-border"></div>
+				</div>
+
+				<div class="more-posts">
+					<div class="col-sm-4 first">
+						<p class="blog-post-meta more-posts-title"><a href="trends.html">Trendy</a><time>2 / 05</time></p>
+						<a href="#">
+							<h3 class="blog-post-title read-also">Stroje komunijne dla dziewczyn i chłopców – sukienki i garnitur czy alby komunijne?</h3>
+						</a>
+					</div>
+					<div class="col-sm-4 middle">
+						<p class="blog-post-meta more-posts-title"><a href="trends.html">Trendy</a><time>2 / 05</time></p>
+						<a href="#">
+							<h3 class="blog-post-title read-also">Wakacje we dwoje? Czy to na pewno dobry pomysł?</h3>
+						</a>
+					</div>
+					<div class="col-sm-4 last">
+						<p class="blog-post-meta more-posts-title"><a href="trends.html">Trendy</a><time>2 / 05</time></p>
+						<a href="#">
+							<h3 class="blog-post-title read-also">Stroje komunijne dla dziewczyn i chłopców – sukienki i garnitur czy alby komunijne?</h3>
+						</a>
+					</div>
+				</div>
+				
+				<!-- Disqus skrypt -->
+				<div id="disqus_thread"></div>
+					<script>
+						var disqus_config = function () {
+							this.page.url = '<?php echo get_permalink(); ?>';
+							this.page.identifier = '<?php echo dsq_identifier_for_post($post); ?>';
+						};
+
+						(function() {  // DON'T EDIT BELOW THIS LINE
+							var d = document, s = d.createElement('script');
+
+							s.src = '//michadevelopwpsite.disqus.com/embed.js';
+
+							s.setAttribute('data-timestamp', +new Date());
+							(d.head || d.body).appendChild(s);
+						})();
+					</script>
+
+					<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+					</noscript>
 
 			</section>	<!-- /.blog-main -->
 
