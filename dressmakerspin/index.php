@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="container">
+<div class="container categories">
 
 		<!-- Wyróżnione wpisy
 		<section class="blog-header">
@@ -55,21 +55,21 @@
 
 				<?php if(have_posts()) : ?>
 		   		<?php while(have_posts()) : the_post(); ?>
-				
+
 				<article class="blog-post" id="post-<?php the_ID(); ?>">
-					
+
 					<p class="blog-post-meta"><?php foreach((get_the_category()) as $category) { $category->cat_name . ' '; } ?><a href="<?php echo get_category_link(get_cat_id($category->cat_name)); ?>"><?php echo $category->cat_name ?></a><time><?php the_time('d / m'); ?></time></p>
-					
+
 					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 						<?php the_title('<h2 class="blog-post-title">','</h2>'); ?>
 					</a>
-					
+
 					<p><?php the_excerpt();?></p>
-					
+
 				</article>	<!-- /.blog-post -->
-				
+
 		   		<?php endwhile; ?>
-				
+
 				<?php if (!is_singular()) : ?>
 					<nav>
 						<ul class="pager">
@@ -78,6 +78,16 @@
 						</ul>
 					</nav>
 				<?php endif; ?>
+
+				<?php else : ?>
+
+				<article class="subpages-article">
+
+					<h1 class="subpages-title">Nie znaleziono żadnych wpisów :-(</h1>
+
+					<p class="profile-description subpage"><strong>Nie przejmuj się! Być może jest to chwilowy błąd.</strong><br>Jeśli chcesz możesz wejść na moją stronę główną <a href="http://michaldevelopwp.azurewebsites.net">klikając tutaj</a> :-)</p>
+
+				</article>
 
 				<?php endif; ?>
 
