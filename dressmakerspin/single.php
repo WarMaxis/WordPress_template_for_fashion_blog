@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="container categories">
+<div class="container categories post">
 
 		<div class="row">
 
@@ -9,8 +9,20 @@
 
 				<?php if(have_posts()) : ?>
 		   		<?php while(have_posts()) : the_post(); ?>
-				
-				<article class="blog-post" id="post-<?php the_ID(); ?>">
+
+				<!-- Zdjęcie wpisu -->
+				<div class="blog-header post">
+					<div class="header-container">
+
+						<!-- Znak strony -->
+						<img class="logo2" src="<?php echo get_bloginfo('template_directory');?>/images/logo2.png" alt="logo2" height="350">
+
+						<img class="post-photo" src="<?php if ( has_post_thumbnail() ) { the_post_thumbnail_url(); };?>" alt="post-photo">
+
+					</div>
+				</div>
+
+				<article class="blog-post all" id="post-<?php the_ID(); ?>">
 					
 					<p class="blog-post-meta"><?php foreach((get_the_category()) as $category) { $category->cat_name . ' '; } ?><a href="<?php echo get_category_link(get_cat_id($category->cat_name)); ?>"><?php echo $category->cat_name ?></a><time><?php the_time('d / m'); ?></time></p>
 					

@@ -58,7 +58,7 @@
 				
 				<article class="blog-post" id="post-<?php the_ID(); ?>">
 					
-					<p class="blog-post-meta"><?php foreach((get_the_category()) as $category) { $category->cat_name . ' '; } ?><a href="<?php echo get_category_link(get_cat_id($category->cat_name)); ?>"><?php echo $category->cat_name ?></a><time><?php the_time('d/m'); ?></time></p>
+					<p class="blog-post-meta"><?php foreach((get_the_category()) as $category) { $category->cat_name . ' '; } ?><a href="<?php echo get_category_link(get_cat_id($category->cat_name)); ?>"><?php echo $category->cat_name ?></a><time><?php the_time('d / m'); ?></time></p>
 					
 					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 						<?php the_title('<h2 class="blog-post-title">','</h2>'); ?>
