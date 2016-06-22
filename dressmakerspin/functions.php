@@ -1,10 +1,13 @@
 <?php
 
-// !!! Tutaj podajemy swoje linki do portali społecznościowych oraz lokalizacji zdjęcia profilowego, po edycji należy zapisać plik !!!
+// !!! Tutaj podajemy swoje linki do portali społecznościowych, lokalizację zdjęcia profilowego, opis autorki w sidebar, po edycji należy zapisać plik !!!
+
 $facebook_link = 'https://www.facebook.com/'; // Facebook
 $twitter_link = 'https://twitter.com/'; // Twitter
 $instagram_link = 'https://www.instagram.com/'; // Instagram
 $author_photo_link = 'http://michaldevelopwp.azurewebsites.net/wp-content/uploads/2016/06/autorka-profilowe.png'; // Zdjęcie profilowe autorki
+$author_description = '<strong>Cześć, tu Aga!</strong><br>Prowadzę tego bloga i tego, i czytajcie a sie dowiecie. Same fajne rzeczy, bez ściemniania.'; // Opis autorki w sidebar, pomiędzy znacznikami <strong></strong> wstawiamy tekst, który ma być pogrubiony, znaczniki <br> wprowadzają nam enter - następny tekst zaczyna się od nowej linijki
+	
 // !!! Więcej już nic nie edytujemy :-) !!!
 
 
@@ -14,6 +17,7 @@ define('FACEBOOK_LINK', $facebook_link);
 define('TWITTER_LINK', $twitter_link);
 define('INSTAGRAM_LINK', $instagram_link);
 define('AUTHOR_PHOTO_LINK', $author_photo_link);
+define('AUTHOR_DESCRIPTION', $author_description);
 
 //Add thumbnail, automatic feed links and title tag support
 add_theme_support( 'post-thumbnails' );
