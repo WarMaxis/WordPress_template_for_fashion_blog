@@ -17,7 +17,9 @@
 						<!-- Znak strony -->
 						<img class="logo2" src="<?php echo get_bloginfo('template_directory');?>/images/logo2.png" alt="logo2" height="350">
 
-						<img class="post-photo" src="<?php if ( has_post_thumbnail() ) { the_post_thumbnail_url(); };?>" alt="post-photo">
+						<?php if ( has_post_thumbnail() ) : ?>
+							<img class="post-photo" src="<?php the_post_thumbnail_url(); ?>" alt="post-photo">
+						<?php endif; ?>
 
 					</div>
 				</div>
