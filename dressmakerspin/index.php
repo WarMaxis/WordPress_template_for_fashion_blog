@@ -68,45 +68,16 @@
 					
 				</article>	<!-- /.blog-post -->
 				
-				<?php
-				if (is_singular()) {
-				// support for pages split by nextpage quicktag
-				wp_link_pages();
-
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-
-				// Previous/next post navigation.
-				the_post_navigation( array(
-					'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'twentyfifteen' ) . '</span> ' .
-						'<span class="screen-reader-text">' . __( 'Next post:', 'twentyfifteen' ) . '</span> ' .
-						'<span class="post-title">%title</span>',
-					'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'twentyfifteen' ) . '</span> ' .
-						'<span class="screen-reader-text">' . __( 'Previous post:', 'twentyfifteen' ) . '</span> ' .
-						'<span class="post-title">%title</span>',
-				) );
-
-				// tags anyone?
-				the_tags();
-				}
-				?>
 		   		<?php endwhile; ?>
 				
 				<?php if (!is_singular()) : ?>
-				<div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
-				<div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
+					<nav>
+						<ul class="pager">
+							<li><?php previous_posts_link( '<span class="fa fa-arrow-left"></span> Nowsze posty' ); ?></li>
+							<li><?php next_posts_link( 'Starsze posty <span class="fa fa-arrow-right"></span>' ); ?></li>
+						</ul>
+					</nav>
 				<?php endif; ?>
-
-				<?php else : ?>
-
-				<article class="subpages-article">
-
-					<h1 class="subpages-title">Brak wpisów w tej kategorii.</h1>
-
-					<p class="profile-description subpage"><strong>W tej chwili nie ma w tej kategorii żadnych wpisów.</strong><br>Jeśli chcesz możesz wejść na moją stronę główną <a href="http://michaldevelopwp.azurewebsites.net">klikając tutaj</a> :-)</p>
-
-				</article>
 
 				<?php endif; ?>
 
