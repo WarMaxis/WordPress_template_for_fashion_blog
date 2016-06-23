@@ -54,19 +54,54 @@
 			<section class="col-sm-8 blog-main">
 
 				<?php if(have_posts()) : ?>
+				<?php $count = 0; ?>
 		   		<?php while(have_posts()) : the_post(); ?>
+				<?php $count++; ?>
 
-				<article class="blog-post" id="post-<?php the_ID(); ?>">
+					<?php if ($count == 2) : ?>
 
-					<p class="blog-post-meta"><?php foreach((get_the_category()) as $category) { $category->cat_name . ' '; } ?><a href="<?php echo get_category_link(get_cat_id($category->cat_name)); ?>"><?php echo $category->cat_name ?></a><time><?php the_time('d / m'); ?></time></p>
+						<blockquote class="blockquote-featured">
+							<div class="reference-container">
+								<p class="reference-blockquote">POLECAM</p>
+								<div class="reference-border"></div>
+							</div>
+							<div class="blockquote-container">
+								<p class="blockquote-paragraph">“Daj mi właściwe słowo i odpowiedni akcent, a poruszę świat.”</p>
+								<p class="blockquote-link">
+									<strong>
+										<a href="http://www.complex.com/" target="_blank">www.complex.com</a>
+									</strong>
+								</p>
+							</div>
+						</blockquote>
 
-					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-						<?php the_title('<h2 class="blog-post-title">','</h2>'); ?>
-					</a>
+						<article class="blog-post" id="post-<?php the_ID(); ?>">
 
-					<p><?php the_excerpt();?></p>
+							<p class="blog-post-meta"><?php foreach((get_the_category()) as $category) { $category->cat_name . ' '; } ?><a href="<?php echo get_category_link(get_cat_id($category->cat_name)); ?>"><?php echo $category->cat_name ?></a><time><?php the_time('d / m'); ?></time></p>
 
-				</article>	<!-- /.blog-post -->
+							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+								<?php the_title('<h2 class="blog-post-title">','</h2>'); ?>
+							</a>
+
+							<p><?php the_excerpt();?></p>
+
+						</article>	<!-- /.blog-post -->
+
+					<?php else : ?>
+
+						<article class="blog-post" id="post-<?php the_ID(); ?>">
+
+							<p class="blog-post-meta"><?php foreach((get_the_category()) as $category) { $category->cat_name . ' '; } ?><a href="<?php echo get_category_link(get_cat_id($category->cat_name)); ?>"><?php echo $category->cat_name ?></a><time><?php the_time('d / m'); ?></time></p>
+
+							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+								<?php the_title('<h2 class="blog-post-title">','</h2>'); ?>
+							</a>
+
+							<p><?php the_excerpt();?></p>
+
+						</article>	<!-- /.blog-post -->
+
+					<?php endif; ?>
 
 		   		<?php endwhile; ?>
 
