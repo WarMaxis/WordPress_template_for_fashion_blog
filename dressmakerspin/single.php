@@ -56,26 +56,36 @@
 				</div>
 
 				<div class="more-posts">
+
+					<?php global $post; $myposts = get_posts('numberposts=1&offset=1&'); foreach($myposts as $post) : setup_postdata($post);?>
 					<div class="col-sm-4 first">
-						<p class="blog-post-meta more-posts-title"><a href="trends.html">Trendy</a><time>2 / 05</time></p>
-						<a href="#">
-							<h3 class="blog-post-title read-also">Stroje komunijne dla dziewczyn i chłopców – sukienki i garnitur czy alby komunijne?</h3>
+						<p class="blog-post-meta more-posts-title"><?php foreach((get_the_category()) as $category) { $category->cat_name . ' '; } ?><a href="<?php echo get_category_link(get_cat_id($category->cat_name)); ?>"><?php echo $category->cat_name ?></a><time><?php the_time('d / m'); ?></time></p>
+						<a href="<?php the_permalink(); ?>">
+							<h3 class="blog-post-title read-also"><?php the_title(); ?></h3>
 						</a>
 					</div>
+					<?php endforeach; ?>
+
+					<?php global $post; $myposts = get_posts('numberposts=1&offset=2&'); foreach($myposts as $post) : setup_postdata($post);?>
 					<div class="col-sm-4 middle">
-						<p class="blog-post-meta more-posts-title"><a href="trends.html">Trendy</a><time>2 / 05</time></p>
-						<a href="#">
-							<h3 class="blog-post-title read-also">Wakacje we dwoje? Czy to na pewno dobry pomysł?</h3>
+						<p class="blog-post-meta more-posts-title"><?php foreach((get_the_category()) as $category) { $category->cat_name . ' '; } ?><a href="<?php echo get_category_link(get_cat_id($category->cat_name)); ?>"><?php echo $category->cat_name ?></a><time><?php the_time('d / m'); ?></time></p>
+						<a href="<?php the_permalink(); ?>">
+							<h3 class="blog-post-title read-also"><?php the_title(); ?></h3>
 						</a>
 					</div>
+					<?php endforeach; ?>
+
+					<?php global $post; $myposts = get_posts('numberposts=1&offset=3&'); foreach($myposts as $post) : setup_postdata($post);?>
 					<div class="col-sm-4 last">
-						<p class="blog-post-meta more-posts-title"><a href="trends.html">Trendy</a><time>2 / 05</time></p>
-						<a href="#">
-							<h3 class="blog-post-title read-also">Stroje komunijne dla dziewczyn i chłopców – sukienki i garnitur czy alby komunijne?</h3>
+						<p class="blog-post-meta more-posts-title"><?php foreach((get_the_category()) as $category) { $category->cat_name . ' '; } ?><a href="<?php echo get_category_link(get_cat_id($category->cat_name)); ?>"><?php echo $category->cat_name ?></a><time><?php the_time('d / m'); ?></time></p>
+						<a href="<?php the_permalink(); ?>">
+							<h3 class="blog-post-title read-also"><?php the_title(); ?></h3>
 						</a>
 					</div>
+					<?php endforeach; ?>
+
 				</div>
-				
+
 				<!-- Disqus skrypt -->
 				<div id="disqus_thread"></div>
 					<script>
