@@ -360,6 +360,7 @@ h6, .h6 {
 .sidebar-module-inset {
 	margin-right: 0px;
 	background-color: #f9f9f9;
+	text-align: center;
 }
 
 .profile-description {
