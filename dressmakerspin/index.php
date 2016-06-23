@@ -66,10 +66,10 @@
 								<div class="reference-border"></div>
 							</div>
 							<div class="blockquote-container">
-								<p class="blockquote-paragraph">“Daj mi właściwe słowo i odpowiedni akcent, a poruszę świat.”</p>
+								<p class="blockquote-paragraph"><?php echo BLOCKQUOTE_PARAGRAPH; ?></p>
 								<p class="blockquote-link">
 									<strong>
-										<a href="http://www.complex.com/" target="_blank">www.complex.com</a>
+										<a href="<?php echo BLOCKQUOTE_LINK; ?>" target="_blank"><?php echo BLOCKQUOTE_LINK_TEXT; ?></a>
 									</strong>
 								</p>
 							</div>

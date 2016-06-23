@@ -1,5 +1,11 @@
 <?php
 
+// !!! Tutaj edytujemy treść sekcji "Polecam", oddzielnie cytat oraz oddzielnie link i wyświetlany tekst linku !!!
+$blockquote_paragraph = '“Daj mi właściwe słowo i odpowiedni akcent, a poruszę świat.”'; // Edytujemy część zawartą między '', np. 'TUTAJ TWÓJ TEKST'
+$blockquote_link = 'http://www.complex.com/'; // Tutaj wklejamy adres linku
+$blockquote_link_text = 'www.complex.com'; // A tutaj wyświetlany tekst linku
+
+
 // !!! Tutaj podajemy swoje linki do portali społecznościowych, lokalizację zdjęcia profilowego, opis autorki w sidebar, wyświetlaną długość postów na stronie głównej, po edycji należy zapisać plik !!!
 
 $facebook_link = 'https://www.facebook.com/'; // Facebook
@@ -8,7 +14,7 @@ $instagram_link = 'https://www.instagram.com/'; // Instagram
 $author_photo_link = 'http://michaldevelopwp.azurewebsites.net/wp-content/uploads/2016/06/autorka-profilowe.png'; // Zdjęcie profilowe autorki
 $author_description = '<strong>Cześć, tu Aga!</strong><br>Prowadzę tego bloga i tego, i czytajcie a sie dowiecie. Same fajne rzeczy, bez ściemniania.'; // Opis autorki w sidebar, pomiędzy znacznikami <strong></strong> wstawiamy tekst, który ma być pogrubiony, znaczniki <br> wprowadzają nam enter - następny tekst zaczyna się od nowej linijki
 $post_display_length = 35; // Wyświetlana ilość znaków przy każdym poście na stronie głównej i w menu kategorii
-	
+
 // !!! Więcej już nic nie edytujemy :-) !!!
 
 
@@ -20,6 +26,10 @@ define('INSTAGRAM_LINK', $instagram_link);
 define('AUTHOR_PHOTO_LINK', $author_photo_link);
 define('AUTHOR_DESCRIPTION', $author_description);
 define('POST_DISPLAY_LENGTH', $post_display_length);
+define('BLOCKQUOTE_PARAGRAPH', $blockquote_paragraph);
+define('BLOCKQUOTE_LINK', $blockquote_link);
+define('BLOCKQUOTE_LINK_TEXT', $blockquote_link_text);
+
 
 //Add thumbnail, automatic feed links and title tag support
 add_theme_support( 'post-thumbnails' );
