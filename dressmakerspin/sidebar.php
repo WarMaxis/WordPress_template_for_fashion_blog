@@ -16,8 +16,8 @@
 		</section>
 
 		<section class="instagram-sidebar">
-			<p class="profile-description"><strong>INSTAGRAM</strong></p>
 			<div class="category-border sidebar"></div>
+			<?php dynamic_sidebar(); ?>
 		</section>
 
 	</div>
