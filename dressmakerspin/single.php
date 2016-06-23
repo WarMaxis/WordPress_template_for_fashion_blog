@@ -84,6 +84,8 @@
 					</div>
 					<?php endforeach; ?>
 
+					<?php wp_reset_postdata(); ?>
+
 				</div>
 
 				<!-- Disqus skrypt -->
