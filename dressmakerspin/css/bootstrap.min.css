@@ -88,7 +88,7 @@ h6, .h6 {
 
 .blog-header {
   padding-top: 20px;
-  padding-bottom: 0px;
+  padding-bottom: 20px;
 }
 .blog-title {
   margin-top: 30px;
@@ -711,6 +711,10 @@ h6, .h6 {
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
 	color: #cd5d5c;
 	background-color: #ffffff;
+}
+
+.blog-header.post {
+	padding-bottom: 0px;
 }
 
 /*

@@ -1,15 +1,15 @@
 <?php get_header(); ?>
 
-<div class="container categories">
+<div class="container">
 
-		<!-- Wyróżnione wpisy
+		<!-- Wyróżnione wpisy -->
 		<section class="blog-header">
 			<article class="header-container">
 
-				<!-- Znak strony
-				<img class="logo2" src="assets/images/logo2.png" alt="logo2" height="350">
+				<!-- Znak strony -->
+				<img class="logo2" src="<?php echo get_bloginfo('template_directory');?>/images/logo2.png" alt="logo2" height="350">
 
-				<!-- Slider
+				<!-- Slider -->
 				<div class="slider-box">
 
 					<div class="slides">
@@ -46,7 +46,7 @@
 				</div>
 
 			</article>
-		</section> -->
+		</section>
 
 		<div class="row">
 
