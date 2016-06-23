@@ -23,5 +23,8 @@
 <!-- Disqus -->
 <script id="dsq-count-scr" src="//michadevelopwpsite.disqus.com/count.js" async></script>
 
+<!-- Slider -->
+<script src="<?php echo get_bloginfo('template_directory');?>/js/slider.js"></script>
+
 </body>
 </html>

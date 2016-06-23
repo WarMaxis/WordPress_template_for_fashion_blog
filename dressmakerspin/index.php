@@ -7,41 +7,63 @@
 			<article class="header-container">
 
 				<!-- Znak strony -->
-				<img class="logo2" src="<?php echo get_bloginfo('template_directory');?>/images/logo2.png" alt="logo2" height="350">
+				<img class="logo2 main-site" src="<?php echo get_bloginfo('template_directory');?>/images/logo2.png" alt="logo2" height="350">
 
 				<!-- Slider -->
 				<div class="slider-box">
 
 					<div class="slides">
-						<a href="post.html">
-							<div class="header-photo"></div>
-							<div class="header-title">
-								<time class="lead blog-description">2 / 05</time>
-								<h1 class="blog-title">Chcemy być modne, ale bez wydawania pieniędzy</h1>
-								<div class="blog-title-border"></div>
-							</div>
-						</a>
+						<?php global $post; $myposts = get_posts('numberposts=1&offset=0&'); foreach($myposts as $post) : setup_postdata($post);?>
+							<a href="<?php the_permalink(); ?>">
+								<?php if ( has_post_thumbnail() ) : ?>
+								<div class="header-photo"><img src="<?php the_post_thumbnail_url(); ?>" alt="slider-photo"></div>
+								<?php else : ?>
+								<div class="header-photo"></div>
+								<?php endif; ?>
+								<div class="header-title">
+									<time class="lead blog-description"><?php the_time('d / m'); ?></time>
+									<h1 class="blog-title"><?php short_title('…', 40); ?></h1>
+									<div class="blog-title-border"></div>
+								</div>
+							</a>
+						<?php endforeach; ?>
 					</div>
+
 					<div class="slides first-hide">
-						<a href="post.html">
-							<div class="header-photo two"></div>
-							<div class="header-title">
-								<time class="lead blog-description">10 / 05</time>
-								<h1 class="blog-title">Poważny temat numer dwa</h1>
-								<div class="blog-title-border"></div>
-							</div>
-						</a>
+						<?php global $post; $myposts = get_posts('numberposts=1&offset=1&'); foreach($myposts as $post) : setup_postdata($post);?>
+							<a href="<?php the_permalink(); ?>">
+								<?php if ( has_post_thumbnail() ) : ?>
+								<div class="header-photo"><img src="<?php the_post_thumbnail_url(); ?>" alt="slider-photo"></div>
+								<?php else : ?>
+								<div class="header-photo"></div>
+								<?php endif; ?>
+								<div class="header-title">
+									<time class="lead blog-description"><?php the_time('d / m'); ?></time>
+									<h1 class="blog-title"><?php short_title('…', 40); ?></h1>
+									<div class="blog-title-border"></div>
+								</div>
+							</a>
+						<?php endforeach; ?>
 					</div>
+
 					<div class="slides first-hide">
-						<a href="post.html">
-							<div class="header-photo three"></div>
-							<div class="header-title">
-								<time class="lead blog-description">1 / 05</time>
-								<h1 class="blog-title">Poważny temat numer trzy</h1>
-								<div class="blog-title-border"></div>
-							</div>
-						</a>
+						<?php global $post; $myposts = get_posts('numberposts=1&offset=2&'); foreach($myposts as $post) : setup_postdata($post);?>
+							<a href="<?php the_permalink(); ?>">
+								<?php if ( has_post_thumbnail() ) : ?>
+								<div class="header-photo"><img src="<?php the_post_thumbnail_url(); ?>" alt="slider-photo"></div>
+								<?php else : ?>
+								<div class="header-photo"></div>
+								<?php endif; ?>
+								<div class="header-title">
+									<time class="lead blog-description"><?php the_time('d / m'); ?></time>
+									<h1 class="blog-title"><?php short_title('…', 40); ?></h1>
+									<div class="blog-title-border"></div>
+								</div>
+							</a>
+						<?php endforeach; ?>
 					</div>
+
+					<?php wp_reset_postdata(); ?>
 
 				</div>
 

@@ -449,4 +449,16 @@ add_filter('excerpt_length', 'my_excerpt_length');
 
 
 
+function short_title($after = '', $length) {
+	$mytitle = get_the_title();
+	if ( strlen($mytitle) > $length ) {
+	$mytitle = substr($mytitle,0,$length);
+	echo $mytitle . $after;
+	} else {
+	echo $mytitle;
+	}
+}
+
+
+
 ?>
