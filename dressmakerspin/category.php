@@ -39,7 +39,7 @@
 
 					<h1 class="subpages-title">Brak wpisów w tej kategorii.</h1>
 
-					<p class="profile-description subpage"><strong>W tej chwili nie ma w tej kategorii żadnych wpisów.</strong><br>Jeśli chcesz możesz wejść na moją stronę główną <a href="http://michaldevelopwp.azurewebsites.net">klikając tutaj</a> :-)</p>
+					<p class="profile-description subpage"><strong>W tej chwili nie ma w tej kategorii żadnych wpisów.</strong><br>Jeśli chcesz możesz wejść na moją stronę główną <a href="<?php echo home_url(); ?>">klikając tutaj</a> :-)</p>
 
 				</article>
 

@@ -120,7 +120,7 @@
 
 					<h1 class="subpages-title">Nie znaleziono żadnych wpisów :-(</h1>
 
-					<p class="profile-description subpage"><strong>Nie przejmuj się! Być może jest to chwilowy błąd.</strong><br>Jeśli chcesz możesz wejść na moją stronę główną <a href="http://michaldevelopwp.azurewebsites.net">klikając tutaj</a> :-)</p>
+					<p class="profile-description subpage"><strong>Nie przejmuj się! Być może jest to chwilowy błąd.</strong><br>Jeśli chcesz możesz wejść na moją stronę główną <a href="<?php echo home_url(); ?>">klikając tutaj</a> :-)</p>
 
 				</article>
 
