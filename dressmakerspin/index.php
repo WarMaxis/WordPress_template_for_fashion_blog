@@ -12,56 +12,56 @@
 				<!-- Slider -->
 				<div class="slider-box">
 
+					<?php global $post; $myposts = get_posts('numberposts=1&offset=0&'); foreach($myposts as $post) : setup_postdata($post);?>
 					<div class="slides">
-						<?php global $post; $myposts = get_posts('numberposts=1&offset=0&'); foreach($myposts as $post) : setup_postdata($post);?>
-							<a href="<?php the_permalink(); ?>">
-								<?php if ( has_post_thumbnail() ) : ?>
-								<div class="header-photo"><img src="<?php the_post_thumbnail_url(); ?>" alt="slider-photo"></div>
-								<?php else : ?>
-								<div class="header-photo"></div>
-								<?php endif; ?>
-								<div class="header-title">
-									<time class="lead blog-description"><?php the_time('d / m'); ?></time>
-									<h1 class="blog-title"><?php short_title('…', 40); ?></h1>
-									<div class="blog-title-border"></div>
-								</div>
-							</a>
-						<?php endforeach; ?>
+						<a href="<?php the_permalink(); ?>">
+							<?php if ( has_post_thumbnail() ) : ?>
+							<div class="header-photo"><img src="<?php the_post_thumbnail_url(); ?>" alt="slider-photo"></div>
+							<?php else : ?>
+							<div class="header-photo"></div>
+							<?php endif; ?>
+							<div class="header-title">
+								<time class="lead blog-description"><?php the_time('d / m'); ?></time>
+								<h1 class="blog-title"><?php short_title('…', 40); ?></h1>
+								<div class="blog-title-border"></div>
+							</div>
+						</a>
 					</div>
+					<?php endforeach; ?>
 
+					<?php global $post; $myposts = get_posts('numberposts=1&offset=1&'); foreach($myposts as $post) : setup_postdata($post);?>
 					<div class="slides first-hide">
-						<?php global $post; $myposts = get_posts('numberposts=1&offset=1&'); foreach($myposts as $post) : setup_postdata($post);?>
-							<a href="<?php the_permalink(); ?>">
-								<?php if ( has_post_thumbnail() ) : ?>
-								<div class="header-photo"><img src="<?php the_post_thumbnail_url(); ?>" alt="slider-photo"></div>
-								<?php else : ?>
-								<div class="header-photo"></div>
-								<?php endif; ?>
-								<div class="header-title">
-									<time class="lead blog-description"><?php the_time('d / m'); ?></time>
-									<h1 class="blog-title"><?php short_title('…', 40); ?></h1>
-									<div class="blog-title-border"></div>
-								</div>
-							</a>
-						<?php endforeach; ?>
+						<a href="<?php the_permalink(); ?>">
+							<?php if ( has_post_thumbnail() ) : ?>
+							<div class="header-photo"><img src="<?php the_post_thumbnail_url(); ?>" alt="slider-photo"></div>
+							<?php else : ?>
+							<div class="header-photo"></div>
+							<?php endif; ?>
+							<div class="header-title">
+								<time class="lead blog-description"><?php the_time('d / m'); ?></time>
+								<h1 class="blog-title"><?php short_title('…', 40); ?></h1>
+								<div class="blog-title-border"></div>
+							</div>
+						</a>
 					</div>
+					<?php endforeach; ?>
 
+					<?php global $post; $myposts = get_posts('numberposts=1&offset=2&'); foreach($myposts as $post) : setup_postdata($post);?>
 					<div class="slides first-hide">
-						<?php global $post; $myposts = get_posts('numberposts=1&offset=2&'); foreach($myposts as $post) : setup_postdata($post);?>
-							<a href="<?php the_permalink(); ?>">
-								<?php if ( has_post_thumbnail() ) : ?>
-								<div class="header-photo"><img src="<?php the_post_thumbnail_url(); ?>" alt="slider-photo"></div>
-								<?php else : ?>
-								<div class="header-photo"></div>
-								<?php endif; ?>
-								<div class="header-title">
-									<time class="lead blog-description"><?php the_time('d / m'); ?></time>
-									<h1 class="blog-title"><?php short_title('…', 40); ?></h1>
-									<div class="blog-title-border"></div>
-								</div>
-							</a>
-						<?php endforeach; ?>
+						<a href="<?php the_permalink(); ?>">
+							<?php if ( has_post_thumbnail() ) : ?>
+							<div class="header-photo"><img src="<?php the_post_thumbnail_url(); ?>" alt="slider-photo"></div>
+							<?php else : ?>
+							<div class="header-photo"></div>
+							<?php endif; ?>
+							<div class="header-title">
+								<time class="lead blog-description"><?php the_time('d / m'); ?></time>
+								<h1 class="blog-title"><?php short_title('…', 40); ?></h1>
+								<div class="blog-title-border"></div>
+							</div>
+						</a>
 					</div>
+					<?php endforeach; ?>
 
 					<?php wp_reset_postdata(); ?>
 
