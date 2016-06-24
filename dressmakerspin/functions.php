@@ -461,4 +461,39 @@ function short_title($after = '', $length) {
 
 
 
+add_action('admin_notices', 'showAdminMessages');
+
+function showAdminMessages()
+{
+	$plugin_messages = array();
+
+	include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+
+	// Download the Instagram image gallery plugin
+	if(!is_plugin_active( 'instagram-image-gallery/plugin.php' ))
+	{
+		$plugin_messages[] = 'Ten motyw wymaga instalacji oraz włączenia wtyczki Instagram image gallery do poprawnego działania, możesz ją pobrać klikając <a href="https://wordpress.org/plugins/instagram-image-gallery/">tutaj</a>.';
+	}
+
+	// Download the Disqus Comment System
+	if(!is_plugin_active( 'disqus-comment-system/disqus.php' ))
+	{
+		$plugin_messages[] = 'Ten motyw wymaga instalacji oraz włączenia wtyczki Disqus Comment System do poprawnego działania, możesz ją pobrać klikając <a href="http://wordpress.org/extend/plugins/disqus-comment-system/">tutaj</a>.';
+	}
+
+	if(count($plugin_messages) > 0)
+	{
+		echo '<div id="message" class="error">';
+
+			foreach($plugin_messages as $message)
+			{
+				echo '<p><strong>'.$message.'</strong></p>';
+			}
+
+		echo '</div>';
+	}
+}
+
+
+
 ?>
