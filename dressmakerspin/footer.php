@@ -21,7 +21,7 @@
 <script src="https://use.fontawesome.com/8487f6a2c2.js"></script>
 
 <!-- Disqus -->
-<script id="dsq-count-scr" src="//michadevelopwpsite.disqus.com/count.js" async></script>
+<?php echo DISQUS_SECOND_LINK; ?>
 
 <!-- Slider -->
 <script src="<?php echo get_bloginfo('template_directory');?>/js/slider.js"></script>
