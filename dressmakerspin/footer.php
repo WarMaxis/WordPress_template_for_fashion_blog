@@ -20,9 +20,6 @@
 <!-- Font Awesome -->
 <script src="https://use.fontawesome.com/8487f6a2c2.js"></script>
 
-<!-- Disqus -->
-<?php echo DISQUS_SECOND_LINK; ?>
-
 <!-- Slider -->
 <script src="<?php echo get_bloginfo('template_directory');?>/js/slider.js"></script>
 

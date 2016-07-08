@@ -13,13 +13,6 @@ $author_description = get_option( 'pu_theme_options' );
 
 $post_display_length = get_option( 'pu_theme_options' ); // Wyświetlana ilość znaków przy każdym poście na stronie głównej i w menu kategorii
 
-
-// !!! Tutaj edytujemy dane potrzebne do działania wtyczki Disqus !!!
-
-$disqus_first_link = '//michadevelopwpsite.disqus.com/embed.js'; // Link z kodu w kroku numer 1, z części s.src = '//twójadresstrony.disqus.com/embed.js';
-$disqus_second_link = '<script id="dsq-count-scr" src="//michadevelopwpsite.disqus.com/count.js" async></script>'; // Cały kod z kroku numer 3, np. <script id="dsq-count-scr" src="//twójadresstrony.disqus.com/count.js" async></script>
-
-
 // !!! Więcej już nic nie edytujemy :-) !!!
 
 
@@ -32,8 +25,6 @@ define('POST_DISPLAY_LENGTH', $post_display_length['post_display_length']);
 define('BLOCKQUOTE_PARAGRAPH', $blockquote_paragraph['blockquote_paragraph']);
 define('BLOCKQUOTE_LINK', $blockquote_link['blockquote_link']);
 define('BLOCKQUOTE_LINK_TEXT', $blockquote_link_text['blockquote_link_text']);
-define('DISQUS_FIRST_LINK', $disqus_first_link);
-define('DISQUS_SECOND_LINK', $disqus_second_link);
 
 
 //Add thumbnail, automatic feed links and title tag support
