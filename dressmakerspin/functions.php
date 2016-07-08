@@ -216,7 +216,7 @@ function pu_register_settings()
     register_setting( 'pu_theme_options', 'pu_theme_options' );
 
 	// Add settings section
-    add_settings_section( 'pu_text_section2', 'Treść sekcji "Polecam"', 'pu_display_section', 'pu_theme_options.php' );
+    add_settings_section( 'pu_text_section2', 'Treść sekcji "Polecam"', '', 'pu_theme_options.php' );
 	
 	 $field_args = array(
       'type'      => 'text',
@@ -253,7 +253,7 @@ function pu_register_settings()
     add_settings_field( 'blockquote_link_text', 'Wyświetlany tekst linku', 'pu_display_setting', 'pu_theme_options.php', 'pu_text_section2', $field_args );
 	
     // Add settings section two
-    add_settings_section( 'pu_text_section', 'Linki do Social Media', 'pu_display_section', 'pu_theme_options.php' );
+    add_settings_section( 'pu_text_section', 'Linki do Social Media', '', 'pu_theme_options.php' );
 
     $field_args = array(
       'type'      => 'text',
@@ -295,7 +295,7 @@ function pu_register_settings()
     add_settings_field( 'instagram_link', 'Instagram', 'pu_display_setting', 'pu_theme_options.php', 'pu_text_section', $field_args );
 	
 	// Add settings section three
-    add_settings_section( 'pu_text_section3', 'Zdjęcie i opis autorki w sidebarze', 'pu_display_section', 'pu_theme_options.php' );
+    add_settings_section( 'pu_text_section3', 'Zdjęcie i opis autorki w sidebarze', '', 'pu_theme_options.php' );
 	
 	 $field_args = array(
       'type'      => 'text',
@@ -321,7 +321,7 @@ function pu_register_settings()
     add_settings_field( 'author_description', 'Opis autorki', 'pu_display_setting', 'pu_theme_options.php', 'pu_text_section3', $field_args );
 	
 	// Add settings section four
-    add_settings_section( 'pu_text_section4', 'Inne', 'pu_display_section', 'pu_theme_options.php' );
+    add_settings_section( 'pu_text_section4', 'Inne', '', 'pu_theme_options.php' );
 	
 	 $field_args = array(
       'type'      => 'text',
