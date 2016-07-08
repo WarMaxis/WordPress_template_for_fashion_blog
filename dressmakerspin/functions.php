@@ -1,22 +1,17 @@
 <?php
 
-// !!! Tutaj edytujemy treść sekcji "Polecam", oddzielnie cytat oraz oddzielnie link i wyświetlany tekst linku !!!
+$blockquote_paragraph = get_option( 'pu_theme_options' );
+$blockquote_link = get_option( 'pu_theme_options' );
+$blockquote_link_text = get_option( 'pu_theme_options' );
 
-$blockquote_paragraph = '“Daj mi właściwe słowo i odpowiedni akcent, a poruszę świat.”'; // Edytujemy część zawartą między '', np. 'TUTAJ TWÓJ TEKST'
+$facebook_link = get_option( 'pu_theme_options' );
+$twitter_link = get_option( 'pu_theme_options' );
+$instagram_link = get_option( 'pu_theme_options' );
 
-$blockquote_link = 'http://www.complex.com/'; // Tutaj wklejamy adres linku
-$blockquote_link_text = 'www.complex.com'; // A tutaj wyświetlany tekst linku
+$author_photo_link = get_option( 'pu_theme_options' );
+$author_description = get_option( 'pu_theme_options' );
 
-
-// !!! Tutaj podajemy swoje linki do portali społecznościowych, lokalizację zdjęcia profilowego, opis autorki w sidebar, wyświetlaną długość postów na stronie głównej, po edycji należy zapisać plik !!!
-
-$facebook_link = get_option( 'pu_theme_options' ); // Facebook
-$twitter_link = get_option( 'pu_theme_options' ); // Twitter
-$instagram_link = get_option( 'pu_theme_options' ); // Instagram
-$author_photo_link = 'http://michaldevelopwp.azurewebsites.net/wp-content/uploads/2016/06/autorka-profilowe.png'; // Zdjęcie profilowe autorki
-$author_description = '<strong>Cześć, tu Aga!</strong><br>Prowadzę tego bloga i tego, i czytajcie a sie dowiecie. Same fajne rzeczy, bez ściemniania.'; // Opis autorki w sidebar, pomiędzy znacznikami <strong></strong> wstawiamy tekst, który ma być pogrubiony, znaczniki <br> wprowadzają nam enter - następny tekst zaczyna się od nowej linijki
-
-$post_display_length = 35; // Wyświetlana ilość znaków przy każdym poście na stronie głównej i w menu kategorii
+$post_display_length = get_option( 'pu_theme_options' ); // Wyświetlana ilość znaków przy każdym poście na stronie głównej i w menu kategorii
 
 
 // !!! Tutaj edytujemy dane potrzebne do działania wtyczki Disqus !!!
@@ -28,17 +23,15 @@ $disqus_second_link = '<script id="dsq-count-scr" src="//michadevelopwpsite.disq
 // !!! Więcej już nic nie edytujemy :-) !!!
 
 
-
-
 define('FACEBOOK_LINK', $facebook_link['facebook_link']);
 define('TWITTER_LINK', $twitter_link['twitter_link']);
 define('INSTAGRAM_LINK', $instagram_link['instagram_link']);
-define('AUTHOR_PHOTO_LINK', $author_photo_link);
-define('AUTHOR_DESCRIPTION', $author_description);
-define('POST_DISPLAY_LENGTH', $post_display_length);
-define('BLOCKQUOTE_PARAGRAPH', $blockquote_paragraph);
-define('BLOCKQUOTE_LINK', $blockquote_link);
-define('BLOCKQUOTE_LINK_TEXT', $blockquote_link_text);
+define('AUTHOR_PHOTO_LINK', $author_photo_link['author_photo_link']);
+define('AUTHOR_DESCRIPTION', $author_description['author_description']);
+define('POST_DISPLAY_LENGTH', $post_display_length['post_display_length']);
+define('BLOCKQUOTE_PARAGRAPH', $blockquote_paragraph['blockquote_paragraph']);
+define('BLOCKQUOTE_LINK', $blockquote_link['blockquote_link']);
+define('BLOCKQUOTE_LINK_TEXT', $blockquote_link_text['blockquote_link_text']);
 define('DISQUS_FIRST_LINK', $disqus_first_link);
 define('DISQUS_SECOND_LINK', $disqus_second_link);
 
@@ -225,7 +218,44 @@ function pu_register_settings()
     // Register the settings with Validation callback
     register_setting( 'pu_theme_options', 'pu_theme_options' );
 
-    // Add settings section
+	// Add settings section
+    add_settings_section( 'pu_text_section2', 'Treść sekcji "Polecam"', 'pu_display_section', 'pu_theme_options.php' );
+	
+	 $field_args = array(
+      'type'      => 'text',
+      'id'        => 'blockquote_paragraph',
+      'name'      => 'blockquote_paragraph',
+      'std'       => '',
+      'label_for' => 'blockquote_paragraph',
+      'class'     => 'css_class'
+    );
+
+    add_settings_field( 'blockquote_paragraph', 'Swój tekst', 'pu_display_setting', 'pu_theme_options.php', 'pu_text_section2', $field_args );
+
+    $field_args = array(
+      'type'      => 'text',
+      'id'        => 'blockquote_link',
+      'name'      => 'blockquote_link',
+      'desc'      => 'Na przykład: http://www.complex.com',
+      'std'       => '',
+      'label_for' => 'blockquote_link',
+      'class'     => 'css_class'
+    );
+
+    add_settings_field( 'blockquote_link', 'Link', 'pu_display_setting', 'pu_theme_options.php', 'pu_text_section2', $field_args );   
+	
+    $field_args = array(
+      'type'      => 'text',
+      'id'        => 'blockquote_link_text',
+      'name'      => 'blockquote_link_text',
+      'std'       => '',
+      'label_for' => 'blockquote_link_text',
+      'class'     => 'css_class'
+    );
+
+    add_settings_field( 'blockquote_link_text', 'Wyświetlany tekst linku', 'pu_display_setting', 'pu_theme_options.php', 'pu_text_section2', $field_args );
+	
+    // Add settings section two
     add_settings_section( 'pu_text_section', 'Linki do Social Media', 'pu_display_section', 'pu_theme_options.php' );
 
     $field_args = array(
@@ -266,6 +296,47 @@ function pu_register_settings()
 
     // Add Instagram field
     add_settings_field( 'instagram_link', 'Instagram', 'pu_display_setting', 'pu_theme_options.php', 'pu_text_section', $field_args );
+	
+	// Add settings section three
+    add_settings_section( 'pu_text_section3', 'Zdjęcie i opis autorki w sidebarze', 'pu_display_section', 'pu_theme_options.php' );
+	
+	 $field_args = array(
+      'type'      => 'text',
+      'id'        => 'author_photo_link',
+      'name'      => 'author_photo_link',
+	  'desc'      => 'Do znalezienia w Media --> Biblioteka i kliknięciu na dane zdjęcie. Na przykład: http://michaldevelopwp.azurewebsites.net/wp-content/uploads/2016/06/autorka-profilowe.png',
+      'std'       => '',
+      'label_for' => 'author_photo_link',
+      'class'     => 'css_class'
+    );
+
+    add_settings_field( 'author_photo_link', 'Link do zdjęcia', 'pu_display_setting', 'pu_theme_options.php', 'pu_text_section3', $field_args );
+
+    $field_args = array(
+      'type'      => 'text',
+      'id'        => 'author_description',
+      'name'      => 'author_description',
+      'std'       => '',
+      'label_for' => 'author_description',
+      'class'     => 'css_class'
+    );
+
+    add_settings_field( 'author_description', 'Opis autorki', 'pu_display_setting', 'pu_theme_options.php', 'pu_text_section3', $field_args );
+	
+	// Add settings section four
+    add_settings_section( 'pu_text_section4', 'Inne', 'pu_display_section', 'pu_theme_options.php' );
+	
+	 $field_args = array(
+      'type'      => 'text',
+      'id'        => 'post_display_length',
+      'name'      => 'post_display_length',
+	  'desc'      => 'Wyświetlana ilość znaków przy każdym poście na stronie głównej i w menu kategorii. Wpisujemy na przykład: 35',
+      'std'       => '',
+      'label_for' => 'post_display_length',
+      'class'     => 'css_class'
+    );
+
+    add_settings_field( 'post_display_length', 'Ilość znaków postów w formie skróconej', 'pu_display_setting', 'pu_theme_options.php', 'pu_text_section4', $field_args );  
 }
 
 
