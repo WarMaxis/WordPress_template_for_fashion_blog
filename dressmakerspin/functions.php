@@ -53,16 +53,6 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 768;
 }
 
-//Add menu support and register main menu
-if ( function_exists( 'register_nav_menus' ) ) {
-  	register_nav_menus(
-  		array(
-  		  'main_menu' => 'Main Menu'
-  		)
-  	);
-}
-
-
 // filter the Gravity Forms button type
 add_filter('gform_submit_button', 'form_submit_button', 10, 2);
 function form_submit_button($button, $form){
