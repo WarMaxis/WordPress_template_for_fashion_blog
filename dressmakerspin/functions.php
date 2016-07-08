@@ -189,7 +189,7 @@ endif;
 // custom theme options for user in admin area - Appearance > Theme Options
 function pu_theme_menu()
 {
-  add_theme_page( 'Theme Option', 'Theme Options', 'manage_options', 'pu_theme_options.php', 'pu_theme_page');  
+  add_theme_page( 'Theme Option', 'Opcje motywu', 'manage_options', 'pu_theme_options.php', 'pu_theme_page');  
 }
 add_action('admin_menu', 'pu_theme_menu');
 
@@ -197,7 +197,7 @@ function pu_theme_page()
 {
 ?>
     <div class="section panel">
-      <h1>Custom Theme Options</h1>
+      <h1>Opcje motywu</h1>
       <form method="post" enctype="multipart/form-data" action="options.php">
       <hr>
         <?php 
@@ -226,27 +226,13 @@ function pu_register_settings()
     register_setting( 'pu_theme_options', 'pu_theme_options' );
 
     // Add settings section
-    add_settings_section( 'pu_text_section', 'Social Links', 'pu_display_section', 'pu_theme_options.php' );
-
-    // Create textbox field
-    $field_args = array(
-      'type'      => 'text',
-      'id'        => 'twitter_link',
-      'name'      => 'twitter_link',
-      'desc'      => 'Twitter Link - Example: http://twitter.com/username',
-      'std'       => '',
-      'label_for' => 'twitter_link',
-      'class'     => 'css_class'
-    );
-
-    // Add twitter field
-    add_settings_field( 'twitter_link', 'Twitter', 'pu_display_setting', 'pu_theme_options.php', 'pu_text_section', $field_args );   
+    add_settings_section( 'pu_text_section', 'Linki do Social Media', 'pu_display_section', 'pu_theme_options.php' );
 
     $field_args = array(
       'type'      => 'text',
       'id'        => 'facebook_link',
       'name'      => 'facebook_link',
-      'desc'      => 'Facebook Link - Example: http://facebook.com/username',
+      'desc'      => 'Facebook Link - Na przykład: http://facebook.com/username',
       'std'       => '',
       'label_for' => 'facebook_link',
       'class'     => 'css_class'
@@ -257,48 +243,22 @@ function pu_register_settings()
 
     $field_args = array(
       'type'      => 'text',
-      'id'        => 'gplus_link',
-      'name'      => 'gplus_link',
-      'desc'      => 'Google+ Link - Example: http://plus.google.com/user_id',
+      'id'        => 'twitter_link',
+      'name'      => 'twitter_link',
+      'desc'      => 'Twitter Link -  Na przykład: http://twitter.com/username',
       'std'       => '',
-      'label_for' => 'gplus_link',
+      'label_for' => 'twitter_link',
       'class'     => 'css_class'
     );
 
-    // Add Google+ field
-    add_settings_field( 'gplus_link', 'Google+', 'pu_display_setting', 'pu_theme_options.php', 'pu_text_section', $field_args );
-
-    $field_args = array(
-      'type'      => 'text',
-      'id'        => 'youtube_link',
-      'name'      => 'youtube_link',
-      'desc'      => 'Youtube Link - Example: https://www.youtube.com/channel/channel_id',
-      'std'       => '',
-      'label_for' => 'youtube_link',
-      'class'     => 'css_class'
-    );
-
-    // Add youtube field
-    add_settings_field( 'youtube_ink', 'Youtube', 'pu_display_setting', 'pu_theme_options.php', 'pu_text_section', $field_args );
-
-    $field_args = array(
-      'type'      => 'text',
-      'id'        => 'linkedin_link',
-      'name'      => 'linkedin_link',
-      'desc'      => 'LinkedIn Link - Example: http://linkedin.com/in/username',
-      'std'       => '',
-      'label_for' => 'linkedin_link',
-      'class'     => 'css_class'
-    );
-
-    // Add LinkedIn field
-    add_settings_field( 'linkedin_link', 'LinkedIn', 'pu_display_setting', 'pu_theme_options.php', 'pu_text_section', $field_args );
-
+    // Add twitter field
+    add_settings_field( 'twitter_link', 'Twitter', 'pu_display_setting', 'pu_theme_options.php', 'pu_text_section', $field_args );   
+	
     $field_args = array(
       'type'      => 'text',
       'id'        => 'instagram_link',
       'name'      => 'instagram_link',
-      'desc'      => 'Instagram Link - Example: http://instagram.com/username',
+      'desc'      => 'Instagram Link -  Na przykład: http://instagram.com/username',
       'std'       => '',
       'label_for' => 'instagram_link',
       'class'     => 'css_class'
@@ -306,26 +266,6 @@ function pu_register_settings()
 
     // Add Instagram field
     add_settings_field( 'instagram_link', 'Instagram', 'pu_display_setting', 'pu_theme_options.php', 'pu_text_section', $field_args );
-
-    // Add settings section title here
-    add_settings_section( 'section_name_here', 'Section Title Here', 'pu_display_section', 'pu_theme_options.php' );
-    
-    // Create textarea field
-    $field_args = array(
-      'type'      => 'textarea',
-      'id'        => 'settings_field_1',
-      'name'      => 'settings_field_1',
-      'desc'      => 'Setting Description Here',
-      'std'       => '',
-      'label_for' => 'settings_field_1'
-    );
-
-    // section_name should be same as section_name above (line 116)
-    add_settings_field( 'settings_field_1', 'Setting Title Here', 'pu_display_setting', 'pu_theme_options.php', 'section_name_here', $field_args );   
-
-
-    // Copy lines 118 through 129 to create additional field within that section
-    // Copy line 116 for a new section and then 118-129 to create a field in that section
 }
 
 
