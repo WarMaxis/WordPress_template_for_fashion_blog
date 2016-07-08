@@ -10,9 +10,9 @@ $blockquote_link_text = 'www.complex.com'; // A tutaj wyświetlany tekst linku
 
 // !!! Tutaj podajemy swoje linki do portali społecznościowych, lokalizację zdjęcia profilowego, opis autorki w sidebar, wyświetlaną długość postów na stronie głównej, po edycji należy zapisać plik !!!
 
-$facebook_link = 'https://www.facebook.com/'; // Facebook
-$twitter_link = 'https://twitter.com/'; // Twitter
-$instagram_link = 'https://www.instagram.com/'; // Instagram
+$facebook_link = get_option( 'pu_theme_options' ); // Facebook
+$twitter_link = get_option( 'pu_theme_options' ); // Twitter
+$instagram_link = get_option( 'pu_theme_options' ); // Instagram
 $author_photo_link = 'http://michaldevelopwp.azurewebsites.net/wp-content/uploads/2016/06/autorka-profilowe.png'; // Zdjęcie profilowe autorki
 $author_description = '<strong>Cześć, tu Aga!</strong><br>Prowadzę tego bloga i tego, i czytajcie a sie dowiecie. Same fajne rzeczy, bez ściemniania.'; // Opis autorki w sidebar, pomiędzy znacznikami <strong></strong> wstawiamy tekst, który ma być pogrubiony, znaczniki <br> wprowadzają nam enter - następny tekst zaczyna się od nowej linijki
 
@@ -30,9 +30,9 @@ $disqus_second_link = '<script id="dsq-count-scr" src="//michadevelopwpsite.disq
 
 
 
-define('FACEBOOK_LINK', $facebook_link);
-define('TWITTER_LINK', $twitter_link);
-define('INSTAGRAM_LINK', $instagram_link);
+define('FACEBOOK_LINK', $facebook_link['facebook_link']);
+define('TWITTER_LINK', $twitter_link['twitter_link']);
+define('INSTAGRAM_LINK', $instagram_link['instagram_link']);
 define('AUTHOR_PHOTO_LINK', $author_photo_link);
 define('AUTHOR_DESCRIPTION', $author_description);
 define('POST_DISPLAY_LENGTH', $post_display_length);
@@ -189,7 +189,7 @@ endif;
 // custom theme options for user in admin area - Appearance > Theme Options
 function pu_theme_menu()
 {
-  add_theme_page( 'Theme Option', 'Opcje motywu', 'manage_options', 'pu_theme_options.php', 'pu_theme_page');  
+  add_theme_page( 'Theme Option', 'Edycja danych motywu', 'manage_options', 'pu_theme_options.php', 'pu_theme_page');  
 }
 add_action('admin_menu', 'pu_theme_menu');
 
@@ -197,7 +197,7 @@ function pu_theme_page()
 {
 ?>
     <div class="section panel">
-      <h1>Opcje motywu</h1>
+      <h1>Edycja danych motywu</h1>
       <form method="post" enctype="multipart/form-data" action="options.php">
       <hr>
         <?php 
