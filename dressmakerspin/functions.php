@@ -59,10 +59,16 @@ function theme_register_sidebar() {
 		register_sidebar(array(
 			'id' => 'sidebar-1',
 		    'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		    'after_widget' => '</div>',
+		    'after_widget' => '</div><br>',
 		    'before_title' => '<h4>',
 		    'after_title' => '</h4>',
+			'name'        => 'Instagram Widget',
 		 ));
+		register_sidebar( array(
+			'id'          => 'adwords-widget',
+			'name'        => 'AdWords Widget',
+			'description' => __( 'Miejsce na reklamę', 'text_domain' ),
+		));
 	}
 }
 
