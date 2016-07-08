@@ -112,7 +112,7 @@
 			</section>	<!-- /.blog-main -->
 
 			<!-- Sidebar -->
-			<?php get_sidebar(); ?>
+			<?php get_sidebar( 'single' ); ?>
 
 		</div>	<!-- /.row -->
 
